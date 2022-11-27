@@ -24,12 +24,12 @@ int Chat(string request)
     return (response);
 }
 
-int Resp = Chat("Введите пятизначное число, пожалуйста");
-string Num = Convert.ToString(Resp, 10);
-if ((Num[0] == Num[4]) && (Num[1] == Num[3]))
-{ System.Console.Write(" Да! Это число - палиндром!"); }
-else
-{ System.Console.Write("Нет, это не палиндром."); }
+int Num = Chat("Введите пятизначное число, пожалуйста");
+
+ if ((Num/10000 == Num%10) && ((Num/1000)%10 == (Num/10)%10))
+ { System.Console.Write(" Да! Это число - палиндром!"); }
+ else
+ { System.Console.Write("Нет, это не палиндром."); }
 
 
 
